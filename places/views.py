@@ -19,12 +19,11 @@ class DistrictsListView(generics.ListAPIView):
 class DistrictsFilterListView(generics.ListAPIView):
     serializer_class = DistrictsFilterListSerializer
     def get_queryset(self):
-        """
-        This view should return a list of all the purchases for
-        the user as determined by the username portion of the URL.
-        """
-        username = self.kwargs['username']
-        return Place.objects.filter(district_id=username)
+        queryset = Place.objects.all()
+        username = self.request.query_params.get('district_id')
+        if username is not None:
+            queryset = Place.objects.filter(district_id=username)
+        return queryset
 class DistrictDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = DistrictsDetailView
     queryset = Districts.objects.all()

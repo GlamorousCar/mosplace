@@ -11,7 +11,7 @@ class DistrictDetailSerializer(serializers.ModelSerializer):
 class DistrictsListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Districts
-        fields = ('id','title',)
+        fields = ('__all__')
 class DistrictsFilterListSerializer(serializers.ModelSerializer):
     images = ImageSerializer(many=True, read_only=True)
     class Meta:
@@ -26,7 +26,7 @@ class PlaceDetailSerializer(serializers.ModelSerializer):
     images = ImageSerializer(many=True, read_only=True)
     class Meta:
         model = Place
-        fields = '__all__'
+        fields = ('__all__')
 
 class PlaceListSerializer(serializers.ModelSerializer):
     class Meta:
@@ -37,4 +37,4 @@ class PlaceListSerializer(serializers.ModelSerializer):
 class PlaceDetailView(serializers.ModelSerializer):
     class Meta:
         model = Place
-        fields = '__all__'
+        fields = ('__all__')
