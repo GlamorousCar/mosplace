@@ -18,6 +18,8 @@ class Place(models.Model):
     district =  models.ForeignKey(Districts,verbose_name='Округ', on_delete = models.CASCADE)
     short_description = models.TextField(verbose_name='Краткое описание',default='')
     full_description = models.TextField(verbose_name='Полное писание',default='')
+    longitude = models.DecimalField(verbose_name = 'Широта', max_digits=9, decimal_places=6 , default=0.0)
+    latitude = models.DecimalField(verbose_name = 'Долгота', max_digits=9, decimal_places=6, default=0.0)
     PLACE_TYPE = (
         ('park','Парк'),
         ('unique_place','Особое место'),
