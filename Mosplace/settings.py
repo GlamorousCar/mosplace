@@ -8,7 +8,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = os.environ.get("DEBUG")
 
-ALLOWED_HOSTS = ['127.0.0.1', 'https://mosplace.pythonanywhere.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'mosplace.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

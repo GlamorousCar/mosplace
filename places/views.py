@@ -7,12 +7,12 @@ from places.serializers import *
 
 
 class DistrictCreateView(generics.CreateAPIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAdminUser]
     serializer_class = DistrictDetailSerializer
 
 
 class DistrictsListView(generics.ListAPIView):
-    permission_classes = [IsAdminUser]
+    permission_classes = [AllowAny]
     serializer_class = DistrictsListSerializer
     queryset = Districts.objects.all()
 
