@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
             name='Gallery',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to=places.models.Gallery.nameFile)),
+                ('image', models.ImageField()),
                 ('place', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='places.place')),
             ],
         ),
