@@ -64,7 +64,7 @@
     - [Django REST](https://www.django-rest-framework.org/) - Мощный и гибкий фреймворк для создания веб-API.
 * Фронтенд web-сайта:
     - [Vue.js](https://ru.vuejs.org/index.html) - Прогрессивный фреймворк для создания пользовательских интерфейсов, который легко интегрируется в проекты с использованием других JavaScript-библиотек.
-* Mobile app:
+* Мобильное приложение для Android:
     * [Kotlin](https://kotlinlang.org/) - Современный, лаконичный, безопасный язык программирования, рекомендованный компанией Google для создания Android приложений.
     * [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) - Библиотека для асинхронной работы.
     * [Retrofit2](https://square.github.io/retrofit/) - REST клиент для Java и Android. Он позволяет легко получить и загрузить JSON (или другие структурированные данные) через веб-сервис на основе REST.
