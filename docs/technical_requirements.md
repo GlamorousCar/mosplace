@@ -61,7 +61,7 @@
     * [Android Architecture Components](https://developer.android.com/topic/architecture) - Коллекция библиотек, которые помогают создавать надежные, тестируемые и поддерживаемые приложения.
         * [View Binding](https://developer.android.com/topic/libraries/view-binding) - Библиотека, являющаяся частью Android Jetpack, которая позволяет намного проще взаимодействовать с интерфейсом.
         * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Класс, который хранит данные и реализует паттерн Observable. LiveData заточена на работу с жизненными циклами Android компонентов.
-        * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Класс, который предназначен для хранения и управления данными, связан с пользовательским интерфейсом, и учетывает жизненный цикл Android компонентов.
+        * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Класс, который предназначен для хранения, управления данными и связан с пользовательским интерфейсом. Учитывает жизненный цикл Android компонентов.
     * [Glide](https://github.com/bumptech/glide) -  Быстрая и эффективная платформа для управления мультимедиа и загрузки изображений с открытым исходным кодом для Android.
     * [Yandex MapKit](https://yandex.ru/dev/maps/mapkit/?from=mapsapi) - Программная библиотека, которая позволяет использовать картографические данные и технологии Яндекса в мобильных приложениях.
     * [MVVM](https://itsobes.ru/AndroidSobes/chto-takoe-mvvm/) - Шаблон проектирования архитектуры приложения.
