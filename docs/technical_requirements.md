@@ -54,9 +54,14 @@
 * Фронтенд web-сайта:
     - Vue.js
 * Mobile app:
-    * [Kotlin](https://kotlinlang.org/) - Современный, лаконичный, безопасный язык программирования, рекомендованный компанией Google для создания Android приложений
-    * [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) - Библиотека для асинхронной работы
-    * [View Binding](https://developer.android.com/topic/libraries/view-binding) - Библиотека, являющаяся частью Android Jetpack, которая позволяет намного проще взаимодействовать с интерфейсом
+    * [Kotlin](https://kotlinlang.org/) - Современный, лаконичный, безопасный язык программирования, рекомендованный компанией Google для создания Android приложений.
+    * [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) - Библиотека для асинхронной работы.
+    * [Retrofit2](https://square.github.io/retrofit/) - REST клиент для Java и Android. Он позволяет легко получить и загрузить JSON (или другие структурированные данные) через веб-сервис на основе REST.
+    * [Hilt](https://dagger.dev/hilt/) - библиотека для внедрения зависимостей, построенная на основе Dagger.
+    * [Android Architecture Components](https://developer.android.com/topic/architecture) - Коллекция библиотек, которые помогают создавать надежные, тестируемые и поддерживаемые приложения.
+        * [View Binding](https://developer.android.com/topic/libraries/view-binding) - Библиотека, являющаяся частью Android Jetpack, которая позволяет намного проще взаимодействовать с интерфейсом.
+        * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Ккласс, который хранит данные и реализует паттерн Observable. LiveData заточена на работу с жизненными циклами Android компонентов.
+    * [Glide](https://github.com/bumptech/glide) -  Быстрая и эффективная платформа для управления мультимедиа и загрузки изображений с открытым исходным кодом для Android.
      
 
 # 4. Требования к дизайну
