@@ -54,7 +54,10 @@
 * Фронтенд web-сайта:
     - Vue.js
 * Mobile app:
-    - Kotlin
+    * [Kotlin](https://kotlinlang.org/) - Современный, лаконичный, безопасный язык программирования, рекомендованный компанией Google для создания Android приложений
+    * [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) - Библиотека для асинхронной работы
+    * [View Binding](https://developer.android.com/topic/libraries/view-binding) - Библиотека, являющаяся частью Android Jetpack, которая позволяет намного проще взаимодействовать с интерфейсом
+     
 
 # 4. Требования к дизайну
 
