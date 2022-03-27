@@ -69,6 +69,7 @@
     * [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) - Библиотека для асинхронной работы.
     * [Retrofit2](https://square.github.io/retrofit/) - REST клиент для Java и Android. Он позволяет легко получить и загрузить JSON (или другие структурированные данные) через веб-сервис на основе REST.
     * [Hilt](https://dagger.dev/hilt/) - Библиотека для внедрения зависимостей, построенная на основе [Dagger](https://dagger.dev/dev-guide/).
+    * [MVVM](https://itsobes.ru/AndroidSobes/chto-takoe-mvvm/) - Шаблон проектирования архитектуры приложения.
     * [Android Architecture Components](https://developer.android.com/topic/architecture) - Коллекция библиотек, которые помогают создавать надежные, тестируемые и поддерживаемые приложения.
         * [View Binding](https://developer.android.com/topic/libraries/view-binding) - Библиотека, являющаяся частью Android Jetpack, которая позволяет намного проще взаимодействовать с интерфейсом.
         * [Navigation Component](https://developer.android.com/guide/navigation) - Позволяет упростить реализацию навигации между экранами в приложении.
@@ -76,8 +77,7 @@
         * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Класс, который предназначен для хранения, управления данными и связан с пользовательским интерфейсом. Учитывает жизненный цикл Android компонентов.
     * [Glide](https://github.com/bumptech/glide) -  Быстрая и эффективная платформа для управления мультимедиа и загрузки изображений с открытым исходным кодом для Android.
     * [Yandex MapKit](https://yandex.ru/dev/maps/mapkit/?from=mapsapi) - Программная библиотека, которая позволяет использовать картографические данные и технологии Яндекса в мобильных приложениях.
-    * [MVVM](https://itsobes.ru/AndroidSobes/chto-takoe-mvvm/) - Шаблон проектирования архитектуры приложения.
-     
+        
 
 # 4. Требования к дизайну
 
