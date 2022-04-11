@@ -60,4 +60,8 @@ class Gallery(models.Model):
                               related_name='images')
 
     def __str__(self):
-        return self.image.name
+        return f'{self.place.title}/{self.image.name[7:]}'
+    class Meta:
+        verbose_name = 'Изображение'
+        verbose_name_plural = 'Изображения'
+
