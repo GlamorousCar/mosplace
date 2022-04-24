@@ -7,8 +7,9 @@ db.sqlite3
 media
 venva
 # Backup files #
-*.bak
-
+*.bak\
+.env
+/static
 # If you are using PyCharm #
 # User-specific stuff
 .idea/**/workspace.xml
