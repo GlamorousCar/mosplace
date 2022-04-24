@@ -9,7 +9,7 @@ venva
 # Backup files #
 *.bak\
 .env
-
+/static
 # If you are using PyCharm #
 # User-specific stuff
 .idea/**/workspace.xml

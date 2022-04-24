@@ -8,7 +8,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = os.environ.get("DEBUG")
 
-ALLOWED_HOSTS = ['127.0.0.1', 'mosplace.pythonanywhere.com']
+ALLOWED_HOSTS = ['http://localhost:3000', '127.0.0.1',
+                 'mosplace.pythonanywhere.com']
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -21,6 +24,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'djoser',
+    'project_auth',
+    'profiles'
 ]
 
 MIDDLEWARE = [
@@ -53,13 +58,24 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Mosplace.wsgi.application'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get("databaseName"),
+            'USER':  os.environ.get('databaseUser'),
+            'PASSWORD':  os.environ.get('databasePassword'),
+            'HOST':  os.environ.get('localhost'),
+            'PORT':  os.environ.get('portNumber'),
+        }
+    }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -76,6 +92,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# AUTH
+
+AUTH_USER_MODEL = 'project_auth.User'
+AUTHENTICATION_BACKENDS = ('project_auth.backends.AuthBackend',)
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -89,7 +110,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 MEDIA_URL = '/media/'
 
 REST_FRAMEWORK = {
@@ -112,7 +133,7 @@ REST_FRAMEWORK = {
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300000),
     'JWT_ALLOW_REFRESH': True,
-    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7)  # default
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7)
 }
 
 DJOSER = {
@@ -126,3 +147,11 @@ DJOSER = {
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('JWT',),
 }
+# EMAIL
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")

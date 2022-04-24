@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from places.models import Districts, Place, Gallery
-from django.contrib.auth.models import User
+from project_auth.models import User
 
 
 class ImageSerializer(serializers.ModelSerializer):
