@@ -79,14 +79,14 @@ POST /api/v1/district_create/
 | abbreviation||
 | image||
 
-## Создание аккаунта
+## Регистрация
 ```http
 POST /auth/users/
 ```
 ### Body parameters 
 | Parameter | Type | Description |
 |------|-----|------|
-| username|str| Required |
+| username or phone ot email|str| Required |
 | password|character set|Required |
 
 Если пользователь существует то ответ будет:
