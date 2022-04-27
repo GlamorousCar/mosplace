@@ -9,6 +9,10 @@ class UserManager(BaseUserManager):
         """
         Creates and saves a User with the given email and password.
         """
+        user = self.model(
+            username=username,
+            **extra_fields
+        )
         if not username:
             if not email and not phone:
                 raise ValueError('The given email/phone must be set')

@@ -8,7 +8,7 @@ class Profile(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE
     )
     name = models.CharField("name", max_length=500)
-    surname = models.CharField("surname", max_length=500)
+    image = models.ImageField(default='default.png')
 
     def __str__(self):
-        return f"{self.name} {self.surname} "
+        return f"{self.name} "

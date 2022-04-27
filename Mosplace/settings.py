@@ -4,9 +4,9 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.environ.get("DEBUG")
+DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = ['http://localhost:3000', '127.0.0.1',
                  'mosplace.pythonanywhere.com']
@@ -58,24 +58,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Mosplace.wsgi.application'
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ.get("databaseName"),
-            'USER':  os.environ.get('databaseUser'),
-            'PASSWORD':  os.environ.get('databasePassword'),
-            'HOST':  os.environ.get('localhost'),
-            'PORT':  os.environ.get('portNumber'),
-        }
-    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -139,7 +128,7 @@ JWT_AUTH = {
 DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
     'SEND_CONFIRMATION_EMAIL': True,
-    'ACTIVATION_URL': 'auth/activate/{uid}/{token}/',
+    'ACTIVATION_URL': 'authl/accounts/activate/{uid}/{token}',
     'PASSWORD_RESET_SHOW_EMAIL_NOT_FOUND': True,
     'PASSWORD_RESET_CONFIRM_URL': 'auth/reset/confirm/{uid}/{token}/',
     'TOKEN_MODEL': None
@@ -151,7 +140,10 @@ SIMPLE_JWT = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_USER = 'Dr.JohnYu@yandex.ru'
+EMAIL_HOST_PASSWORD = 'ywecmfcoxuycaqnu'
 EMAIL_USE_SSL = True
-DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
+DEFAULT_FROM_EMAIL = 'Dr.JohnYu@yandex.ru'
+
+
+
