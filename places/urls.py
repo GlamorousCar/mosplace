@@ -12,6 +12,5 @@ urlpatterns = [
     path('places_all/', PlaceListView.as_view()),
     path('place/<int:pk>', PlaceDetailView.as_view()),
     path('img', ImageDetailView.as_view()),
-    path('profile/', ProfileViewSet.as_view({'get': 'list'}))
 
 ]

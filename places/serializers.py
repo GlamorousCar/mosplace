@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from places.models import Districts, Place, Gallery
 from project_auth.models import User
-from profiles.models import Profile
+
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -57,9 +57,3 @@ class PlaceDetailViewSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ProfileSerializer(serializers.ModelSerializer):
-    # snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Districts.objects.all())
-
-    class Meta:
-        model = Profile
-        fields = ['id', 'name','image']

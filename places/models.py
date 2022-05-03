@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.translation import gettext_lazy as _
 
 class Districts(models.Model):
     def nameFile(instance, filename):
