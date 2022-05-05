@@ -1,6 +1,7 @@
 import datetime
 from pathlib import Path
 import os
+from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -119,12 +120,6 @@ REST_FRAMEWORK = {
     'DATETIME_FORMAT': "%d.%m.%Y %H:%M:%S",
 }
 
-JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300000),
-    'JWT_ALLOW_REFRESH': True,
-    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7)
-}
-
 DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
     'SEND_CONFIRMATION_EMAIL': True,
@@ -134,6 +129,8 @@ DJOSER = {
     'TOKEN_MODEL': None
 }
 SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=2),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=20),
     'AUTH_HEADER_TYPES': ('JWT',),
 }
 # EMAIL
