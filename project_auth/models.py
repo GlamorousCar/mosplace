@@ -27,8 +27,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['email']
 
     class Meta:
-        verbose_name = _('user')
-        verbose_name_plural = _('users')
+        verbose_name = _('Пользователь')
+        verbose_name_plural = _('Пользователи')
         unique_together = ('username', 'email', 'phone')
         db_table = 'auth_user'
         app_label = 'project_auth'
