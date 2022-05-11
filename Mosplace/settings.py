@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'djoser',
     'project_auth',
-    'profiles'
+    'profiles',
+    'reviews'
 ]
 
 MIDDLEWARE = [
@@ -135,12 +136,9 @@ SIMPLE_JWT = {
 }
 # EMAIL
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 465
-EMAIL_HOST_USER = 'Dr.JohnYu@yandex.ru'
-EMAIL_HOST_PASSWORD = 'ywecmfcoxuycaqnu'
+EMAIL_HOST = ''
+EMAIL_PORT = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_SSL = True
-DEFAULT_FROM_EMAIL = 'Dr.JohnYu@yandex.ru'
-
-
-
+DEFAULT_FROM_EMAIL = ''
